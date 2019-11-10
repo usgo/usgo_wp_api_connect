@@ -32,13 +32,15 @@ class UsgoWpApiConnectController extends ControllerBase {
     $frontpage_content = '';
 
     foreach ($client_response_contents as $client_response_content) {
+        $frontpage_content .= '<div class="containfloats">';
         $frontpage_content .= '<a href="' . $client_response_content['link'] . '">';
         $frontpage_content .= '<h2 class="storytitle">' . $client_response_content['title']['rendered'] . '</h2>';
         $frontpage_content .= '</a>';
         $frontpage_content .= $client_response_content['content']['rendered'];
+        $frontpage_content .= '</div>';
 
         $content_categories = '';
-        $content_categories .= '<div class="categories">';
+        $content_categories .= '<div class="categories containfloats">';
         $content_categories .= 'Categories: ';
 
         $content_category_links = array();
