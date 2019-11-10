@@ -1,0 +1,10 @@
+# Access to this path is not restricted. This is notated as _access: 'TRUE'.
+page_example.description:
+  path: '/frontpage'
+  defaults:
+    _controller: '\Drupal\usgo_wp_api_connect\Controller\UsgoWpApiConnectController::frontpage'
+    _title: 'Welcome to the American Go Association'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'
