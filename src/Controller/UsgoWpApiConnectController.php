@@ -58,9 +58,12 @@ class UsgoWpApiConnectController extends ControllerBase {
         $content_categories .= rtrim(implode(', ', $content_category_links));
 
         $content_categories .= '</div>';
-
         $frontpage_content .= $content_categories;
     }
+
+    $frontpage_content .= '<div id="morenewsnav">';
+    $frontpage_content .= '<a href="/news">More News</a>';
+    $frontpage_content .= '</div>';
 
     $content = array(
        '#markup' => $this->t($frontpage_content)
