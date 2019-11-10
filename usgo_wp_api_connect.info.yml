@@ -1,0 +1,8 @@
+name: USGO WP API Connect
+description: Custom module for the American Go Association which connects to our wp website /news 
+package: Usgo Modules
+core: 8.x
+type: module
+
+dependencies:
+  - drupal:block

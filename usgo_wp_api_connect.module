@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Module file for usgo_wp_api_connect.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help
+ */
+function usgo_wp_api_connect_help($route_name, RouteMatchInterface $route_match) {
+    switch($route_name) {
+        case 'help.page.usgo_wp_api_connect':
+            $output = '';
+            $output .= '<h2>' . t('Overview') . '</h2>';
+            $output .= t('The USGO WP Api Connect module connects to our wordpress api provided at https://www.usgo.org/news/wp-json/wp/v2/ in order to display frontpage content.');
+            $output .= '<h2>' . t('Usage') . '</h2>';
+            $output .= 'Create a block within the content section, and allow this block to only be displayed on the frontpage. It will handle how the json content from our wp api to be displayed.';
+            return $output;
+    }
+}
